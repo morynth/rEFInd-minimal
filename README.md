@@ -12,12 +12,20 @@ based systems. This is a clean and minimal theme for it.
     installed. `fdisk -l` and `mount` may help.
 
  2. Create a folder called `themes` inside it, if it doesn't already exist
-
+```sh
+sudo mkdir -p /boot/EFI/refind/themes
+```
  3. Clone this repository into the `themes` directory.
-
+```sh
+git clone https://github.com/morynth/rEFInd-minimal.git
+sudo cp -r ./rEFInd-minimal /boot/EFI/refind/themes
+```
  4. To enable the theme add `include themes/rEFInd-minimal/theme.conf` at the end of
     `refind.conf`.
-
+ 5. Here's an example configuration,you can copy `refind.conf` to your `/boot/EFI/refind/refind.conf`(optional)
+```sh
+sudo cp ./rEFInd-minimal/refind.conf /boot/EFI/refind
+```
 Here's an example menuentry configuration (from the screenshot)
 
 ```nginx
